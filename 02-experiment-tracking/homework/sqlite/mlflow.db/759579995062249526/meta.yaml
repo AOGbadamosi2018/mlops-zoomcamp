@@ -1,0 +1,6 @@
+artifact_location: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526
+creation_time: 1717362522637
+experiment_id: '759579995062249526'
+last_update_time: 1717362522637
+lifecycle_stage: active
+name: random-forest-hyperopt

@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/f03aa95b7b5b477bb25bf5ca961dd9ae/artifacts
+end_time: 1717363879626
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: f03aa95b7b5b477bb25bf5ca961dd9ae
+run_name: trusting-dove-728
+run_uuid: f03aa95b7b5b477bb25bf5ca961dd9ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363877475
+status: 3
+tags: []
+user_id: codespace

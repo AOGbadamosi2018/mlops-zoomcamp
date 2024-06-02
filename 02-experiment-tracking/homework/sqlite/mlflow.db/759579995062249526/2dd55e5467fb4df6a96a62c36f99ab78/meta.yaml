@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/2dd55e5467fb4df6a96a62c36f99ab78/artifacts
+end_time: 1717364060730
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: 2dd55e5467fb4df6a96a62c36f99ab78
+run_name: amusing-flea-727
+run_uuid: 2dd55e5467fb4df6a96a62c36f99ab78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363975768
+status: 3
+tags: []
+user_id: codespace

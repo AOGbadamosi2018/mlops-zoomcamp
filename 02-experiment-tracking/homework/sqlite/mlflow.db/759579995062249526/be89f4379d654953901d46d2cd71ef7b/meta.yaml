@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/be89f4379d654953901d46d2cd71ef7b/artifacts
+end_time: 1717363863640
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: be89f4379d654953901d46d2cd71ef7b
+run_name: zealous-moose-426
+run_uuid: be89f4379d654953901d46d2cd71ef7b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363857155
+status: 3
+tags: []
+user_id: codespace

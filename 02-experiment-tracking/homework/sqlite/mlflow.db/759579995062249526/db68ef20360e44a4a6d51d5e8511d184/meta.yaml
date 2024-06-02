@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/db68ef20360e44a4a6d51d5e8511d184/artifacts
+end_time: 1717363822329
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: db68ef20360e44a4a6d51d5e8511d184
+run_name: carefree-boar-537
+run_uuid: db68ef20360e44a4a6d51d5e8511d184
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363810891
+status: 3
+tags: []
+user_id: codespace

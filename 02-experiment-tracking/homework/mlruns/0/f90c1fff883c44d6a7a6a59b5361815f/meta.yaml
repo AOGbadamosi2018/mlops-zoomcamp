@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/homework/mlruns/0/f90c1fff883c44d6a7a6a59b5361815f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f90c1fff883c44d6a7a6a59b5361815f
+run_name: legendary-stoat-963
+run_uuid: f90c1fff883c44d6a7a6a59b5361815f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363306983
+status: 1
+tags: []
+user_id: codespace

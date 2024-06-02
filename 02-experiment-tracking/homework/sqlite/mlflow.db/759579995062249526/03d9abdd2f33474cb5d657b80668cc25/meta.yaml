@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/03d9abdd2f33474cb5d657b80668cc25/artifacts
+end_time: 1717363883962
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: 03d9abdd2f33474cb5d657b80668cc25
+run_name: upset-carp-684
+run_uuid: 03d9abdd2f33474cb5d657b80668cc25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363879631
+status: 3
+tags: []
+user_id: codespace

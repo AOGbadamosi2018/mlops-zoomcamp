@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/homework/mlruns/0/810fb2381aef474ea708b5c3daaeedf9/artifacts
+end_time: 1717360195774
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 810fb2381aef474ea708b5c3daaeedf9
+run_name: silent-boar-904
+run_uuid: 810fb2381aef474ea708b5c3daaeedf9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717360184688
+status: 3
+tags: []
+user_id: codespace

@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/e2a517dffafa4c17801f939bfe770df3/artifacts
+end_time: 1717363855081
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: e2a517dffafa4c17801f939bfe770df3
+run_name: delicate-robin-944
+run_uuid: e2a517dffafa4c17801f939bfe770df3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363845568
+status: 3
+tags: []
+user_id: codespace

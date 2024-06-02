@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/6ff7c297e6dc4d9e85cd9273abf8589a/artifacts
+end_time: 1717363869072
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: 6ff7c297e6dc4d9e85cd9273abf8589a
+run_name: nervous-hound-485
+run_uuid: 6ff7c297e6dc4d9e85cd9273abf8589a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363863644
+status: 3
+tags: []
+user_id: codespace

@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/dccf304d7e6e408f876707f9b9126e28/artifacts
+end_time: 1717363825708
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: dccf304d7e6e408f876707f9b9126e28
+run_name: intelligent-pig-886
+run_uuid: dccf304d7e6e408f876707f9b9126e28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363823907
+status: 3
+tags: []
+user_id: codespace

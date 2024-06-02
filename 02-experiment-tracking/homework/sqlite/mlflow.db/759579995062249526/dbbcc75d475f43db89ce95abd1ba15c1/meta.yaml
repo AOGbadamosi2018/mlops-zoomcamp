@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/dbbcc75d475f43db89ce95abd1ba15c1/artifacts
+end_time: 1717363823900
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: dbbcc75d475f43db89ce95abd1ba15c1
+run_name: auspicious-yak-176
+run_uuid: dbbcc75d475f43db89ce95abd1ba15c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363822335
+status: 3
+tags: []
+user_id: codespace

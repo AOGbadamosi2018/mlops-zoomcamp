@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/0/cde39c0d187d41f9acf7f7571328acbf/artifacts
+end_time: 1717363889933
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cde39c0d187d41f9acf7f7571328acbf
+run_name: upbeat-smelt-72
+run_uuid: cde39c0d187d41f9acf7f7571328acbf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363810867
+status: 3
+tags: []
+user_id: codespace

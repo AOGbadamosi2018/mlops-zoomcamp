@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/0/fb31e378d0744827918fb97373e13d1a/artifacts
+end_time: 1717363750275
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fb31e378d0744827918fb97373e13d1a
+run_name: whimsical-goose-550
+run_uuid: fb31e378d0744827918fb97373e13d1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363750246
+status: 4
+tags: []
+user_id: codespace

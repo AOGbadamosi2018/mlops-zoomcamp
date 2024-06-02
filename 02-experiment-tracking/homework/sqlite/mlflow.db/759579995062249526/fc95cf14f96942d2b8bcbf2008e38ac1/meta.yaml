@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/fc95cf14f96942d2b8bcbf2008e38ac1/artifacts
+end_time: 1717363831943
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: fc95cf14f96942d2b8bcbf2008e38ac1
+run_name: omniscient-tern-774
+run_uuid: fc95cf14f96942d2b8bcbf2008e38ac1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363825712
+status: 3
+tags: []
+user_id: codespace

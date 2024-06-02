@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/0/8988bbd4a0494ceca9e632e0a90232a4/artifacts
+end_time: 1717363410556
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8988bbd4a0494ceca9e632e0a90232a4
+run_name: selective-whale-430
+run_uuid: 8988bbd4a0494ceca9e632e0a90232a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363353193
+status: 3
+tags: []
+user_id: codespace

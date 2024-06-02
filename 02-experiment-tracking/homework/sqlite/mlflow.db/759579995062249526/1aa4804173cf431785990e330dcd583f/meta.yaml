@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/mlops-zoomcamp/02-experiment-tracking/homework/sqlite/mlflow.db/759579995062249526/1aa4804173cf431785990e330dcd583f/artifacts
+end_time: 1717363873624
+entry_point_name: ''
+experiment_id: '759579995062249526'
+lifecycle_stage: active
+run_id: 1aa4804173cf431785990e330dcd583f
+run_name: gregarious-quail-613
+run_uuid: 1aa4804173cf431785990e330dcd583f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717363869076
+status: 3
+tags: []
+user_id: codespace
