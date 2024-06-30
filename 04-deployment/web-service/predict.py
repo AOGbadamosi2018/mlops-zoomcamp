@@ -3,7 +3,8 @@ import pickle
 from flask import Flask , request , jsonify
 
 
-with open('/workspaces/mlops-zoomcamp/04-deployment/model.bin', 'rb') as f_in:
+# using flask with open('/workspaces/mlops-zoomcamp/04-deployment/model.bin', 'rb') as f_in:
+with open('model.bin', 'rb') as f_in:
     (dv, model)  = pickle.load(f_in)
 
 
