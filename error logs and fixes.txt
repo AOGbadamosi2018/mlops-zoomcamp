@@ -73,13 +73,16 @@ DB_ENDPOINT = mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com
 DB_NAME = mlflow-backend-db
 DB_USER = mlflow (check_masterusername in configuration tab )
 DB_PASSWORD = vc7giErv1DVCyk60F22f (see line 19)
-S3_BUCKET_NAME = mlflow_abiodun
+S3_BUCKET_NAME = mlflow-abiodun
 
-PUTTING IT ALL TOGETHER TO START THE SERVER 
-mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/mlflow-backend-db --default-artifact-root s3://mlflow_abiodun
+CODE FOR STARTING THE MLFLOW SERVER THAT WORKS BY CONNECTING TO THE DEFAULT DATABASE 
+mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/postgres --default
+-artifact-root s3://mlflow-abiodun/
 
-mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/mlflow-backend-db --default-artifact-root s3://mlflow_abiodun
+use aws s3api get-bucket-location --bucket mlflow_abiodun
+ to check the correct bucket name 
 
+ Ensure to check that underscores are not represernted at hyphens in your bucket name. 
 
 for urllib error when starting tracking server , downgrade urllib
 use pip3 install "urllib3<2.0"
@@ -91,7 +94,7 @@ sudo yum install postgresql
 psql -h mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com -p 5432 -U mlflow -d mlflow
 
 
-14th August , 2024 
+14th August , 2024 - more mlflow server troubleshooting notes 
 
 pip install mlflow psycopg2-binary
 
@@ -102,15 +105,6 @@ export MLFLOW_TRACKING_URI=postgresql://<username>:<password>@mlflow-backend-db.
 -- CONNECT TO THE DEFAULT DATABASE - usually postgres 
 psql -h mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com -U mlflow -p 5432 postgres
 
-
-CODE FOR STARTING THE MLFLOW SERVER THAT WORKS BY CONNECTING TO THE DEFAULT DATABASE 
-mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/postgres --default
--artifact-root s3://mlflow_abiodun/
-
-use aws s3api get-bucket-location --bucket mlflow_abiodun
- to check the correct bucket name 
-
- Ensure to check that underscores are not represernted at hyphens in your bucket name. 
 
 NOTE : To connect a custom database you will need to create that with the following command 
 
