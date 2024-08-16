@@ -40,3 +40,15 @@ docker run -it --rm -p 9696:9696 ride-duration-prediction-service:v1
 ```
 
 #### The docker container can be deployed to AWS Beanstalk and or Kubernetes. 
+
+#### precommit hooks
+The precommit sample can be checked in the .git directory 
+to add a standalone repo so that the hooks are local
+use: 
+1. git.init
+2. Then within the standalone git repository we need to run 
+    pre-commit sample-commit ? pre-commit-config.yaml
+3. cd into git/hooks
+4. Run pre-commit install 
+5. We need to install the pre commit hook after creating the environemnt everytime we pull the repo 
+6. we can use a gitignore to not commit pycache
