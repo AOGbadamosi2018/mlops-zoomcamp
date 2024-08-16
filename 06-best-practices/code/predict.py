@@ -1,7 +1,6 @@
 import pickle
 
-from flask import Flask, request, jsonify
-
+from flask import Flask, jsonify, request
 
 # using flask with open('/workspaces/mlops-zoomcamp/04-deployment/model.bin', 'rb') as f_in:
 with open('model.bin', 'rb') as f_in:
