@@ -1,0 +1,42 @@
+
+volumes: 
+  grafana_data: {}
+
+networks:
+  front-tier:
+  back-tier:
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
+    networks:
+      - back-tier
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - back-tier
+      - front-tier  
+
+  grafana:
+    image: grafana/grafana-enterprise
+    user: "472"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro"
+      - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/grafana-dashboards.yaml:/etc/grafana/provisioning/datasources/dashboards.yaml:ro"
+      - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/dashboards:/opt/grafana/dashboards"
+
+    networks:
+      - back-tier
+      - front-tier
+    restart: always
