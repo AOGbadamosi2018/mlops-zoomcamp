@@ -33,8 +33,6 @@ services:
       - "3000:3000"
     volumes:
       - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro"
-      - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/grafana-dashboards.yaml:/etc/grafana/provisioning/datasources/dashboards.yaml:ro"
-      - "/workspaces/mlops-zoomcamp/05 - Monitoring/config/dashboards:/opt/grafana/dashboards"
 
     networks:
       - back-tier
