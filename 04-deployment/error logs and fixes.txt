@@ -1,0 +1,154 @@
+
+MODULE 2
+if having openssl error when trying to create new conda environment 
+
+run 
+
+pip install --force-reinstall "cryptography==38.0.4"
+
+Delete the previous mlflow yaml file before specifying a new sqlite backend store
+Also delete the mlruns tracking folder 
+For any notebook opened ensure to use the python kernel associated with the tracking environment
+To do that use : 
+a. conda activate exp-tracking-env
+b. conda install ipykernel
+
+-- Corrected some syntax errors with the mlflow registration , promotion and searching 
+
+mlflow postgres database master password 
+jLDWM59Hs70UAXBsbcMW
+
+--- NEW POSTGRES DATABASE
+Master username
+mlflow
+Master password
+vc7giErv1DVCyk60F22f
+vc7giErv1DVCyk60F22f
+
+mlflow postgres database endpoint 
+mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com
+
+-------------------------
+Connecting to the EC2 instance 
+- Copy the .pem key to the root folder 
+mkdir -p ~/.ssh
+cp /path/to/your/id_rsa ~/.ssh/
+make the key readable chmod 600 ~/.ssh/id_rsa
+run the connection from the ssh folder that contains the ssh key (note that once the instance is started 
+go the ssh tab and copy the newly generated endpoint, it should look like something like shown below )
+- ssh folder i.e ssh -i "mlflow-key-pair.pem" ec2-user@ec2-34-244-249-222.eu-west-1.compute.amazonaws.com
+
+--------------------STARTING THE SERVER ----------------------------
+Run the following commands to install the dependencies, configure the environment and launch the server:
+
+1. sudo yum update
+2. pip3 install mlflow boto3 psycopg2-binary
+3. aws configure # you'll need to input your AWS credentials here
+example - mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://DB_USER:DB_PASSWORD@DB_ENDPOINT:5432/DB_NAME --default-artifact-root s3://S3_BUCKET_NAME
+mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://DB_USER:DB_PASSWORD@DB_ENDPOINT:5432/DB_NAME --default-artifact-root s3://S3_BUCKET_NAME
+DB_ENDPOINT = mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com
+
+
+----remove this 
+
+
+To get the access key secretid create a user and create a secret 
+current user "mlflow_server" - secret details 
+ACCESS_KEY AKIAYZ3IKHKABJ6MKXW4
+check the local downloads folder for that other component
+
+i.e 
+[ec2-user@ip-172-31-29-50 ~]$ aws configure
+AWS Access Key ID [None]: AKIAYZ3IKHKABJ6MKXW4 (this is the id for the IAM user)
+
+Default region name [None]: eu-west-1 check the instance name 
+Default output format [None]: text
+
+check connectivity to aws s3 by listing buckets 
+aws s3 ls 
+
+mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://DB_USER:DB_PASSWORD@DB_ENDPOINT:5432/DB_NAME --default-artifact-root s3://S3_BUCKET_NAME
+
+DB_ENDPOINT = mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com
+DB_NAME = mlflow-backend-db
+DB_USER = mlflow (check_masterusername in configuration tab )
+DB_PASSWORD = vc7giErv1DVCyk60F22f (see line 19)
+S3_BUCKET_NAME = mlflow-abiodun
+
+CODE FOR STARTING THE MLFLOW SERVER THAT WORKS BY CONNECTING TO THE DEFAULT DATABASE 
+mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/postgres --default
+-artifact-root s3://mlflow-abiodun/
+
+use aws s3api get-bucket-location --bucket mlflow_abiodun
+ to check the correct bucket name 
+
+ Ensure to check that underscores are not represernted at hyphens in your bucket name. 
+
+for urllib error when starting tracking server , downgrade urllib
+use pip3 install "urllib3<2.0"
+
+Ran this 
+
+sudo yum install postgresql
+
+psql -h mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com -p 5432 -U mlflow -d mlflow
+
+
+14th August , 2024 - more mlflow server troubleshooting notes 
+
+pip install mlflow psycopg2-binary
+
+adding this line to the .bashrc file
+
+export MLFLOW_TRACKING_URI=postgresql://<username>:<password>@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/mlflow
+
+-- CONNECT TO THE DEFAULT DATABASE - usually postgres 
+psql -h mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com -U mlflow -p 5432 postgres
+
+
+NOTE : To connect a custom database you will need to create that with the following command 
+
+Here’s a summary of the commands you’ll use:
+
+psql -h mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com -U mlflow -p 5432 postgres
+
+Then, within psql:
+
+SQL
+
+CREATE DATABASE mlflow;
+\l
+\q
+
+Open the public dns 
+
+To set the mlflow user id in your ec2 instance run 
+
+from your notebook you need to install aws cli 
+aws sts get-caller-identity
+
+Download the installer : 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+unzip the installer : 
+unzip awscliv2.zip
+
+run the installer : 
+sudo ./aws/install
+
+
+verify the installation : 
+aws --version
+
+
+Run aws configure to set the profile(enter credentials for 
+IAM user with the right policies  ) : 
+aws configure
+
+
+The config file can be located by listing all the hidden files in the root directory 
+
+i.e running cd ~ then running  ls -a
+
+check the .config and the .credentials file for the profile name or use the original name 'default'
+ 
