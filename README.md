@@ -141,4 +141,4 @@ image uri - "605272291968.dkr.ecr.eu-west-1.amazonaws.com/stg_stream_model_durat
 
 
 starting the mlflow tracking server 
-mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/postgres --default-artifact-root s3://mlflow-abiodun
+mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:vc7giErv1DVCyk60F22f@mlflow-backend-db.ct8mgeis0gmy.eu-west-1.rds.amazonaws.com:5432/postgres --default-artifact-root s3://mlflow-abiodung
